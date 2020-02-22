@@ -1,7 +1,11 @@
 defmodule HelloWeb.PageController do
   use HelloWeb, :controller
+  alias Hello.Topic
+  alias Hello.Topic.Model
 
   def index(conn, _params) do
-    render(conn, "index.html")
+    conn
+    |> assign(:topics, Topic.findAll(Model, ""))
+    |> render("index.html")
   end
 end

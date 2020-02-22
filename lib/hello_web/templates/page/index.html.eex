@@ -1,35 +1,31 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
-</section>
-
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">v1.4 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-    </ul>
-  </article>
-</section>
+<%= for topic <- @topics do %>
+    <section class="topic">
+        <div class="topic-meta">
+            <img class="avatar" style="width:1.5em;height:1.5em"
+                src="https://avatars1.githubusercontent.com/u/5058131?s=64&v=4">
+            <a class="author-name">madao</a>
+            <span class="topic-time">
+                1 hours ago
+            </span>
+        </div>
+        <div class="topic-title">
+            <strong>
+                what makes you beauty
+            </strong>
+        </div>
+        <div class="topic-content">
+            you know everything can not beat you will make you strong
+        </div>
+        <div class="topic-footer row">
+            <div class="col">
+                <img src="/images/thumbs-up-line.svg" alt="" width="20" height="48" title="Bootstrap" />
+                <span>15.6k</span>
+                <img src="/images/thumbs-down-line.svg" alt="" width="20" height="48" title="Bootstrap" />
+            </div>
+            <div class="col justify-content-start">
+                <img src="/images/talk-bubbles-line.svg" alt="" width="20" height="48" title="Bootstrap" />
+                <span class="comments">228 comments</span>
+            </div>
+        </div>
+    </section>
+<% end %>

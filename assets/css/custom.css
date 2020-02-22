@@ -1,0 +1,56 @@
+body {
+    background-color: #f6f8fa;
+}
+
+.menu-toggle::after {
+    content: "\2261"
+}
+
+.topic {
+    background-color: #ffffff;
+    margin-bottom: 0.4em;
+    padding: 0em 0.2em;
+}
+
+.topic-meta {
+    color: rgb(120, 124, 126);
+    padding: 0.3em;
+}
+
+.topic-title {
+    padding: 0.2em;
+    font-size: 1.5em;
+    margin-bottom: 0.4em;
+}
+
+.topic-content {
+    padding: 0px, 0.2em;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 0.8em solid transparent;
+    border-right: 0.8em solid transparent;
+
+    border-bottom: 0.8em solid black;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 0.8em solid transparent;
+    border-right: 0.8em solid transparent;
+
+    border-top: 0.8em solid #f00;
+}
+
+.comments {
+    color: rgb(120, 124, 126);
+}
+
+@media(max-width: 414px) {
+    .collapse {
+        display: none
+    }
+}
