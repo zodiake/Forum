@@ -1,7 +1,8 @@
 defmodule Hello.Topic do
   use Ecto.Repo,
-      otp_app: :hello,
-      adapter: Ecto.Adapters.Postgres
+    otp_app: :hello,
+    adapter: Ecto.Adapters.Postgres
+
   alias Hello.Topic.Model
   alias Hello.Topic.Repo
 
@@ -12,6 +13,6 @@ defmodule Hello.Topic do
   end
 
   def findById(id) do
-
+    @repo.findAll()
   end
 end

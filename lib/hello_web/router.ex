@@ -11,10 +11,11 @@ defmodule HelloWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
     plug Plug.Parsers,
-         parsers: [:urlencoded, :multipart, :json],
-         pass: ["*/*"],
-         json_decoder: Jason
+      parsers: [:urlencoded, :multipart, :json],
+      pass: ["*/*"],
+      json_decoder: Jason
   end
 
   scope "/", HelloWeb do
@@ -28,6 +29,7 @@ defmodule HelloWeb.Router do
 
     post "/", ApiController, :index
   end
+
   # Other scopes may use custom stacks.
   # scope "/api", HelloWeb do
   #   pipe_through :api

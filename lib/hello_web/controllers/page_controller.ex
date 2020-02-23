@@ -5,7 +5,7 @@ defmodule HelloWeb.PageController do
 
   def index(conn, _params) do
     conn
-    |> assign(:topics, Topic.findAll(Model, ""))
+    |> assign(:topics, Topic.findById("1"))
     |> render("index.html")
   end
 end
